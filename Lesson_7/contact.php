@@ -42,16 +42,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       if (empty($nume) && empty($email) && empty($numar)) {
 
-         $utilizator = [
-            'nume' => $_POST['nume'],
-            'email' => $_POST['email'],
-            'numar' => $_POST['numar']
-         ];
+         $utilizator = $_POST;
+
+         // $utilizator = [
+         //    'nume' => $_POST['nume'],
+         //    'email' => $_POST['email'],
+         //    'numar' => $_POST['numar']
+         // ];
+
          // array_push($array, [$_POST['nume'], $_POST['email'], $_POST['numar']] );
          array_push($array, $utilizator);
       } else {
 
-         echo $nume ? $nume: null;
+         echo $nume ? $nume : null;
          echo $email ? $email : null;
          echo $numar ? $numar : null;
 

@@ -11,7 +11,7 @@ d. ( bonus ) In fiecare camp introdus de utilizator trebuie sa fie prezente mini
 <?php
 
 $array = [];
-$nume = '2';
+$nume;
 $email;
 $numar;
 

@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
+   // solution
    if (!empty($_GET['nume'])) {
 
       $rezultate = array_filter($array, function ($arr) {
@@ -75,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
          }
          return false;
       });
-      // solution
       $array = $rezultate;
    } else {
       $array = $arrayNemodificat;

@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-   if (isset($_GET['nume'])) {
+   if (!empty($_GET['nume'])) {
 
       $rezultate = array_filter($array, function ($arr) {
          if (strtolower($arr['nume']) === strtolower($_GET['nume'])) {
@@ -76,15 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
          return false;
       });
       // solution
-      if(count($rezultate) > 0) {
-         $array = $rezultate;
-      } else {
-         $array = $arrayNemodificat;  
-      }  
+      $array = $rezultate;
+   } else {
+      $array = $arrayNemodificat;
    }
 }
 
-?> 
+?>
 
 <html>
 
